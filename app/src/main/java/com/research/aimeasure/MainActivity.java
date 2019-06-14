@@ -18,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //检查获取摄像头权限
         if(hasPermission()){
             if(null == savedInstanceState){
+                //动态加载Fragment
                 setFragment();
             }
         }else {
